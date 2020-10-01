@@ -1,6 +1,6 @@
 var fs = require('fs');
 fs.readFile('./data.txt','utf-8',function(err,data){
-    if(err) return err;
+    if(err) return err
 
 else {
 console.log(data);
@@ -58,6 +58,19 @@ console.log("after calling readfile");  // in asynchronus first read lastline an
 
 //     console.log("renameing file successfully");
 // });
+ 
+
+
+
+// number of words count 
+    fs.readFile('newfile.txt',function(err,data){
+        if(err){
+            console.log(err);
+        }
+        var array = data.toString().split(" ");
+        var l = array.length;
+        console.log("total number of the words " + l);
+    });
 
 
 
